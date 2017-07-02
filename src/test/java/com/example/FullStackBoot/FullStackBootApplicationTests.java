@@ -7,20 +7,21 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.example.FullStackBoot.controller.MainController;
+
 @RunWith(SpringRunner.class)
-//@WebMvcTest(MainController.class)
-@SpringBootTest
+@WebMvcTest(MainController.class)
 public class FullStackBootApplicationTests {
 
 	@Autowired
 	private MockMvc mockMvc;
 	
-	@Test
+	//@Test
 	public void saySampleTest() throws Exception {
 		this.mockMvc.perform(get("/sample").contentType(MediaType.TEXT_PLAIN_VALUE))
 						.andExpect(content().string("sample"));

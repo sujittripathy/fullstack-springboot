@@ -27,6 +27,6 @@ public class FullStackBootApplicationServiceTest {
 	public void getAllContacts(){
 		given(this.mainRepository.fetchContacts()).willReturn(new String[]{"apple","pineapple"});
 		String[] val = mainService.getAllContacts();
-		assertThat(val).contains(new String[]{"orange"});
+		assertThat(val).contains(new String[]{"apple"});
 	}
 }
