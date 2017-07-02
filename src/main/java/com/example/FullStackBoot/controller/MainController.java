@@ -18,13 +18,16 @@ public class MainController {
 					produces = MediaType.APPLICATION_JSON_VALUE)
 	public Map<String,List<Hotel>> sampleMethod(){
 		Map<String, List<Hotel>> map = new LinkedHashMap<>();
-		Hotel h1 = new Hotel(100, "Union City");
-		Hotel h2 = new Hotel(200, "Fremont");
+		Hotel h1 = new Hotel(100, "hotel-1");
+		Hotel h2 = new Hotel(200, "hotel-2");
+		Hotel h3 = new Hotel(300, "hotel-3");
 		List<Hotel> listHotel = new ArrayList<>();
 		listHotel.add(h1);
 		listHotel.add(h2);
+		listHotel.add(h3);
 		
-		map.put("HotelList", listHotel);
+		
+		map.put("hotellist", listHotel);
 		return map;
 	}
 	
