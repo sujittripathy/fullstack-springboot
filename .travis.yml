@@ -5,3 +5,7 @@ jdk:
 #
 #script:
 # - gradle test
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
