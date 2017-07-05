@@ -43,3 +43,12 @@ dependencies {
 //	workingDir '../frontend'
 //	commandLine 'ng build'
 //}
+
+node {
+	download = false
+	nodeModulesDir = file("frontend")
+}
+task buildClient(type: NpmTask, dependsOn: 'npmInstall'){
+	group = 'build'
+	args = ['run', 'build']
+}

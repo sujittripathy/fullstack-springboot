@@ -8,7 +8,7 @@
 .project
 
 /node_modules/
-/public/*
+/public/
 
 # Log file
 *.log
