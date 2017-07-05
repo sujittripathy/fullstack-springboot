@@ -7,6 +7,9 @@
 .classpath
 .project
 
+/node_modules/
+/public/*
+
 # Log file
 *.log
 

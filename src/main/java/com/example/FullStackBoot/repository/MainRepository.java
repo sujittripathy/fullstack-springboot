@@ -1,4 +1,4 @@
-package com.example.FullStackBoot.repository;
+package com.example.fullstackboot.repository;
 
 import org.springframework.stereotype.Repository;
 

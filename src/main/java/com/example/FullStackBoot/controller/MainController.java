@@ -1,4 +1,4 @@
-package com.example.FullStackBoot.controller;
+package com.example.fullstackboot.controller;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
