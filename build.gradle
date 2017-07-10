@@ -29,11 +29,12 @@ repositories {
 
 
 dependencies {
-//	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 //	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile('com.h2database:h2')
 	// https://mvnrepository.com/artifact/com.jayway.restassured/rest-assured
 	testCompile('com.jayway.restassured:rest-assured:1.6')
 	
