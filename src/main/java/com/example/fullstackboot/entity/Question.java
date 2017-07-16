@@ -10,20 +10,22 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="question")
+//@Entity
+//@Table(name="question")
 //@Access(AccessType.FIELD)
 public class Question {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@Id
+	//@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String questionBody;
 	private String questionHeaderText;
 	
-	@OneToMany(mappedBy="question")
+	//@OneToMany(mappedBy="question")
 	private Collection<Tip> tips;
 
+	//@javax.persistence.Version
+	private Integer Version;
 	
 	public int getId() {
 		return id;

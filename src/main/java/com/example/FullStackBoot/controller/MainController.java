@@ -1,7 +1,6 @@
 package com.example.fullstackboot.controller;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,8 +19,7 @@ import com.example.fullstackboot.repository.MainRepository;
 @RestController
 public class MainController {
 
-	@Autowired
-	private MainRepository mainRepository;
+	
 	
 	@RequestMapping(method = RequestMethod.GET,
 					value = "/sample",
@@ -41,39 +39,47 @@ public class MainController {
 		return map;
 	}
 	
-	@RequestMapping(value = "/questions/{ques_id}", method = RequestMethod.GET)
-	public String getAllQuestions(@PathVariable("ques_id") Integer ques_id){
-		StringBuffer strBuf = new StringBuffer();
-		Question ques = mainRepository.findOne(ques_id);
-		strBuf.append(ques.getQuestionBody()).append(ques.getQuestionHeaderText());
-		//ques.getTips().forEach(a -> strBuf.append(a.getTipHeader()).append(a.getTipBody()));
-
-
-		System.out.println("Called getAllQuestions method >>>" + strBuf.toString());
-		
-		
-		
-//		Question ques = new Question();
-//		ques.setQuestionHeaderText("Question 1 header");
-//		ques.setQuestionBody("Question 1 Body ");
+//	@RequestMapping(value = "/questions/{ques_id}", method = RequestMethod.GET)
+//	public String getAllQuestions(@PathVariable("ques_id") Integer ques_id){
+//		StringBuffer strBuf = new StringBuffer();
+//		Question ques = mainRepository.findOne(ques_id);
+//		strBuf.append(ques.getQuestionBody()).append(ques.getQuestionHeaderText()).append(ques.getTips().size());
 //		
-//		
-//		Tip tip1 = new Tip();
-//		tip1.setTipBody("Tip 1 Body");
-//		tip1.setTipHeader("Tip 1 Header");
-//		
-//		Collection<Tip> tipList = new ArrayList<>();
-//		tipList.add(tip1);
+//		//ques.getTips().forEach(a -> strBuf.append(a.getTipHeader()).append(a.getTipBody()));
 //
-//		tip1.setQuestion(ques);
-//		ques.setTips(tipList);
+//
+//		System.out.println("Called getAllQuestions method >>>" + strBuf.toString());
 //		
-//		Question q = mainRepository.save(ques);
-//		System.out.println("SAVED..." + q.getId());
-		
-		
-		return strBuf.toString();
-	}
+//		
+//		
+////		Question ques = new Question();
+////		ques.setQuestionHeaderText("Question 1 header");
+////		ques.setQuestionBody("Question 1 Body ");
+////		
+////		
+////		Tip tip1 = new Tip();
+////		tip1.setTipBody("Tip 1 Body");
+////		tip1.setTipHeader("Tip 1 Header");
+////		
+////		Collection<Tip> tipList = new ArrayList<>();
+////		tipList.add(tip1);
+////
+////		tip1.setQuestion(ques);
+////		ques.setTips(tipList);
+////		
+////		Question q = mainRepository.save(ques);
+////		System.out.println("SAVED..." + q.getId());
+//		
+//		
+//		return strBuf.toString();
+//	}
+	
+//	@RequestMapping(value = "/tip/{tip_id}")
+//	public String getTipDetailsForQues(@PathVariable("tip_id") Integer tipId){
+//		
+//		Tip tip = tipRepository.findOne(tipId);
+//		return tip.getTipDetails().getFooterText();
+//	}
 	
 	@RequestMapping(method = RequestMethod.POST,
 			value = "/hello",

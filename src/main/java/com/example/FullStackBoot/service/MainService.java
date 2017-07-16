@@ -8,10 +8,8 @@ import com.example.fullstackboot.repository.MainRepository;
 @Service
 public class MainService {
 
-	@Autowired
-	private MainRepository mainRepository;
+	//@Autowired
+	//private MainRepository mainRepository;
 	
-	public String[] getAllContacts(){
-		return mainRepository.fetchContacts();
-	}
+	
 }

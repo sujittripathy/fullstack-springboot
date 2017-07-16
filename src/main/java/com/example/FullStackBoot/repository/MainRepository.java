@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.fullstackboot.entity.Question;
 
-public interface MainRepository extends JpaRepository<Question, Integer>{
+public interface MainRepository {//extends JpaRepository<Question, Integer>{
 
 	
 	default public String[] fetchContacts(){

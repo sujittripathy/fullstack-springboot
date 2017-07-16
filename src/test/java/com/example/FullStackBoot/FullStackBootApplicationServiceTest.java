@@ -23,10 +23,5 @@ public class FullStackBootApplicationServiceTest {
 	@MockBean
 	private MainRepository mainRepository;
 	
-	@Test
-	public void getAllContacts(){
-		given(this.mainRepository.fetchContacts()).willReturn(new String[]{"apple","pineapple"});
-		String[] val = mainService.getAllContacts();
-		assertThat(val).contains(new String[]{"apple"});
-	}
+	
 }
